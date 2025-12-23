@@ -1,12 +1,13 @@
 import { resolve } from 'bun'
 import { describe, expect, it } from 'bun:test'
 
-const wsUrl = 'ws://localhost:8080'
+const wsUrl1 = 'ws://localhost:8080'
+const wsUrl2 = 'ws://localhost:8082'
 
 describe('Testing chat app', () => {
     it("User msg inside room1 reaches all", async () => {
-        const ws1 = new WebSocket(wsUrl)
-        const ws2 = new WebSocket(wsUrl)
+        const ws1 = new WebSocket(wsUrl1)
+        const ws2 = new WebSocket(wsUrl2)
 
         // await new Promise<void>((resolve, reject) => {
         //     let cnt = 0;
